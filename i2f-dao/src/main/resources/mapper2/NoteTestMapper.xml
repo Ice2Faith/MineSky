@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.i2f.dao2.NoteTestDao">
+
+    <resultMap id="beanMap" type="com.i2f.model.NoteTestBean">
+
+    </resultMap>
+
+    <select id="testNote" resultType="java.lang.String">
+        select title from notet limit 0,1
+    </select>
+
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.i2f.dao.AdminTestDao">
+
+    <resultMap id="beanMap" type="com.i2f.model.AdminTestBean">
+
+    </resultMap>
+
+    <select id="testDb" resultType="java.lang.String">
+        select account from accountt limit 0,1
+    </select>
+
+</mapper>

@@ -11,6 +11,12 @@ import './permission'
 import './server'
 import B64 from "./utils/base64";
 import AES from "./utils/aes";
+import {$tools} from "./utils/Commons";
+
+
+// import ElementUI from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+// Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
@@ -23,6 +29,7 @@ Vue.prototype.$token={
 };
 Vue.prototype.$b64=B64;
 Vue.prototype.$aes=AES;
+Vue.prototype.$tools=$tools;
 
 /* eslint-disable no-new */
 new Vue({

@@ -29,6 +29,10 @@ public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint, S
         System.out.println("============commence==========");
     	int code = HttpStatus.UNAUTHORIZED;
         String msg = String.format("请求访问：%s，认证失败，无法访问系统资源", request.getRequestURI());
+        if("/error".equals(request.getRequestURI())){
+            code=HttpStatus.NOT_FOUND;
+            msg=String.format("请求的资源找不到了，请检查请求是否正确！");
+        }
         ServletUtils.respJson(response, JacksonUtil.toJson(RespData.error(code,msg)));
     }
 }

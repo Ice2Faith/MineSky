@@ -26,7 +26,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableFeignClients
 @EnableDiscoveryClient
 @ServletComponentScan(basePackages = "com")
-//@MapperScan("com.i2f.dao") //多数据源配置不再需要此配置
+//@MapperScan({"com.**.dao","com.**.mapper"}) //多数据源配置不再需要此配置
 public class I2fAdminApplication {
 
 	public static void main(String[] args) {

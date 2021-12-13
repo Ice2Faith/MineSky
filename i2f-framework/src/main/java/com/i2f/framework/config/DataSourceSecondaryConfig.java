@@ -26,7 +26,7 @@ import javax.sql.DataSource;
 @ConditionalOnProperty(prefix = "spring.datasource.secondary", name = "enabled", havingValue = "true")
 public class DataSourceSecondaryConfig {
 
-    @Value("${spring.datasource.secondary.mappers-location:classpath:mapper2/*.xml}")
+    @Value("${spring.datasource.secondary.mappers-location:classpath:mapper2/**/*Mapper.xml}")
     private String mappersLocation;
 
     public String getMappersLocation() {

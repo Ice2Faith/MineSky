@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = "com.i2f.dao",sqlSessionTemplateRef = "sqlSessionTemplateRefPrimary")
 public class DataSourcePrimaryConfig {
 
-    @Value("${spring.datasource.primary.mappers-location:classpath:mapper/*.xml}")
+    @Value("${spring.datasource.primary.mappers-location:classpath:mapper/**/*Mapper.xml}")
     private String mappersLocation;
 
     public String getMappersLocation() {

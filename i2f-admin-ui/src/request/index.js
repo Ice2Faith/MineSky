@@ -87,7 +87,10 @@ service.interceptors.response.use(res => {
       console.log('sec:rec:',res.data);
     }
     // 未设置状态码则默认成功状态
-    const code = res.data.code || 200;
+    let code = res.data.code ;
+    if(code==undefined || code==null){
+      code=200;
+    }
     // 获取错误信息
     const msg =  res.data.msg
     if (code === 401 ) {

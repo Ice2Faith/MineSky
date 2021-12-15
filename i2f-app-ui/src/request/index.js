@@ -100,7 +100,7 @@ service.interceptors.response.use(res => {
       //   cancelButtonText: '取消',
       //   type: 'warning'
       // }).then(() => {
-      //   router.push('/login?redirect='+encodeURIComponent(router.path));
+      //   router.push({path:'/login',query:{redirect:encodeURIComponent(router.path)}});
       // }).catch(() => {
       //   Message.error('继续停留！');
       // });

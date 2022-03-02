@@ -32,6 +32,8 @@ function start()
 	    echo "$AppName is running..."
 	else
 		chmod a+x $AppName
+		mkdir ${LOG_DIR}
+		chmod a+r ${LOG_DIR}
 		nohup java -jar  $JVM_OPTS $AppName > $LOG_PATH 2>&1 &
 		chmod a+r $LOG_DIR/*.log
 		echo "Start $AppName success..."
@@ -93,7 +95,7 @@ case $ctrlOption in
     restart;;
     status)
     status;;
-	log)
+	  log)
     log;;
     *)
 
